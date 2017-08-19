@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DOM EVENTS</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<style>
+		#mainContainer{
+			margin-bottom: 40px;
+		}
+		#jumbo{
+			margin-top: 30px;
+		}
+		button{
+			margin-left: 10px;
+		}
+		h3{
+			background: #eee;
+			color:inherit;
+			width: 500px;
+		    height: 45px;
+		    padding: 10px;
+		    border-radius: 10px;
+		}
+		#form1{
+			width:400px;
+		}
+		#outputValue{
+			width: 200px;
+		}
+		#blog{
+			background: #eee;
+			border: 3px solid gray;
+			padding-top: 20px;
+			border-radius: 10px;
+		}
+		#hideDiv{
+			border:3px solid gray;
+			border-radius: 10px;
+			padding-left: 30px;
+			width: 68%;
+		}
+		#formDiv, #viewDiv{
+			border: 1px solid gray;
+			border-radius: 10px;
+			padding: 10px;
+			width: 400px;
+			margin:10px;
+		}
+		#selectForm{
+			width: 200px;
+		}
+	</style>
+</head>
+<!-- <body onload="pageLoad()"> -->
+<!-- <body onload="que6()"> -->
+<body onload="hidebutton()">
+	<div id="mainContainer" class="container">
+		<div class="jumbotron" id="jumbo">
+			<h1>DOM AND EVENTS Exercise</h1>
+			<p>Hello, here you can find various examples of <strong>JAVASCRIPT</strong> DOM Events</p>
+		</div>
+		<form>
+			<div id="form1" class="form-group">
+				
+				<h3>Question 1</h3>
+				<label for="inputValue">Enter Fahrenheit value:</label>
+				<input type="text" name="f" class="form-control" id="inputValue" placeholder="Fahrenheit Value" onInput="fahrenheit()"><br>
+
+				<label for="outputValue">Celcius:</label>
+				<output id="outputValue" name="c" class="form-control" for="inputValue"></output>
+
+
+				
+			</div>
+		</form>
+		<h3>Question 2</h3>
+
+		<h2>MY BLOG</h2>
+		<div id="blog" class="row">
+			<div class="col-sm-4">
+				<div class="thumbnail">
+					<img src="https://images.unsplash.com/photo-1468234847176-28606331216a?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&s=86ddf3ea896ad6c9a4b9595edf20ca06">
+				</div>	
+			</div>
+			<div class="col-sm-6">
+				<p>Lorem ipsum dolor sit amet, ut proin ac metus donec, scelerisque et orci sed orci, aute ipsum dapibus vivamus tempus. Ultricies malesuada nullam et, egestas maecenas suscipit justo, pede ultrices tempora orci, accumsan risus minima in malesuada. Pulvinar lectus vel pharetra, lorem gravida pellentesque arcu hymenaeos, suscipit aliquet libero at at. Pulvinar lobortis adipiscing sagittis, vulputate officia mauris augue, curabitur odio pellentesque odio, conubia dolor mi sagittis quis. Sociis do morbi aliquam, at sodales lacus lacus, bibendum volutpat tincidunt ac dolor. Scelerisque dignissim massa lorem, arcu risus amet risus a, velit pellentesque accumsan consectetuer amet, pellentesque mauris integer quam integer.</p>
+			</div>
+					
+		</div>
+
+		<h3>Question 3 & 4</h3>
+		<div id="hideDiv">
+			<h2>This is 1st HTML tag</h2>
+			<h4>One more HTML tag</h4>
+			<div class="row">
+				<div class="col-sm-4">
+					<div class="thumbnail">
+						<img src="https://images.unsplash.com/photo-1474140623667-56a81ce32041?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&s=6141090f05c890ea00f1128c038b823f"> 
+					</div>
+				</div>
+			</div>
+			<p>This Paragraaph tag</p>
+			<button type="button" class="btn btn-danger">button</button><br><br>
+		</div>	<br> 
+		<input type="submit" class="btn btn-info" value="Hide tags" onClick="hide()">
+		<input type="submit" class="btn btn-info" value="Show tags" ondblClick="show()">
+
+		<h3>Question 5</h3>
+		<ul id="over_out">
+			<li>Apple</li>
+			<li>Banana</li>
+			<li>Orange</li>
+			<li>Mango</li>
+		</ul>
+		<input id="inputButton" class="btn btn-warning" type="button" value="Mouseover me!" onmouseover="mouseOver()" onmouseout = "mouseOut()">
+
+		<h3>question 6</h3>
+		<h1 id="main_one">This is H1 tage with id "main_one"</h1>
+		<h2 id="main_two">This is H1 tage with id "main_two"</h2>
+		<h4 id="main_three">This is H1 tage with id "main_three"</h4>	
+
+		<input  class="btn btn-success" type="button" value="Click to see!" onClick="que6Show()">
+
+
+		<h3>Question 7</h3>
+		<form name="checkForm">
+			<input type="checkbox" name="check-list" value = "checkbox 1">Box1<br>
+			<input type="checkbox" name="check-list" value = "checkbox 2">Box2<br>
+			<input type="checkbox" name="check-list" value = "checkbox 3">Box3<br>
+			<input type="checkbox" name="check-list" value = "checkbox 4">Box4<br>
+			<input type="checkbox" name="check-list" value = "checkbox 5">Box5<br>
+			<input type="checkbox" name="check-list" value = "checkbox 6">Box6<br>
+			<input type="checkbox" name="check-list" value = "checkbox 7">Box7<br>
+			<input type="checkbox" name="check-list" value = "checkbox 8">Box8<br>
+			<input type="checkbox" name="check-list" value = "checkbox 9">Box9<br>
+			<input type="checkbox" name="check-list" value = "checkbox 10">Box10<br>
+
+			<input type="button" class="btn btn-success" name="selectAll" value="SELECT ALL" onClick="checkall()">
+			<input type="button" class="btn btn-success" name="unselectAll" value="UNSELECT ALL" onClick="uncheckall()">
+		</form>
+
+		<h3>Question 8</h3>
+		<form id="selectForm">
+			<select id="state" name="selectOption" class="form-control">
+				<option value="">Select State</option>
+				<option value="1">New Jersey</option>
+				<option value="2">New York</option>
+				<option value="3">Pennysilvenia</option>
+				<option value="4">California</option>
+			</select><br>
+			<select id="name" name="selectOption" class="form-control">
+				<option value="">Select Name</option>
+				<option value="1">Rushiraj</option>
+				<option value="2">John</option>
+				<option value="3">Michael</option>
+				<option value="4">Linda</option>
+			</select><br>
+			<select id="fruit" name="selectOption" class="form-control">
+				<option value="">Select Fruit</option>
+				<option value="1">Apple</option>
+				<option value="2">Banana</option>
+				<option value="3">Orange</option>
+				<option value="4">Mango</option>
+			</select><br>
+			<select id="car" name="selectOption" class="form-control">
+				<option value="">Select Car</option>
+				<option value="1">BMW</option>
+				<option value="2">Mercedes</option>
+				<option value="3">Bentley</option>
+				<option value="4">Ferrari</option>
+			</select><br>
+			<select id="city" name="selectOption" class="form-control">
+				<option value="">Select City</option>
+				<option value="1">Edison</option>
+				<option value="2">New York</option>
+				<option value="3">New Brunswick</option>
+				<option value="4">Metuchen</option>
+			</select><br>
+
+			<input type="button" class="btn btn-success" onClick="validate()" value="VALIDATE">
+		</form>
+		<h3>Question 10</h3>
+		<div class = "row">
+			<div id="formDiv" class="col-sm-6">
+				<form id="myForm">
+					<div id="firstForm" class="form-group">
+						<label for="firstName">First Name</label>
+						<input id="firstName" class="form-control" type="text" name="fname" placeholder="First Name"><br>
+
+						<label for="lastName">Last Name</label>
+						<input id="lastName" class="form-control" type="text" name="lname" placeholder="Last Name"><br>
+
+						<input id="maleId" type="radio" name="gender" value="Male"> Male
+						<input id="femaleId" type="radio" name="gender" value="Female"> Female <br><br>
+
+						<label for="state">State</label>
+						<select id="state" class="form-control">
+							<option value="">Select State</option>
+							<option value="1">New Jersey</option>
+							<option value="2">New York</option>
+							<option value="3">Pennysilvenia</option>
+							<option value="4">California</option>
+						</select><br>
+
+						<input  type="button" class="btn btn-success" name="saveButton" value="Save" onClick="showValues()">
+
+					</div>
+				</form>
+			</div>
+			<div id="viewDiv" class="col-sm-6">
+				<p id="p1"></p>
+				<p id="p2"></p>
+				<p id="p3"></p>
+				<p id="p4"></p>
+				<input id="edit" type="button" class="btn btn-success" name="editButton" value="Edit" onClick="showform()">
+			</div>
+		</div>
+
+		<div>
+			<h3>Math & Date Question 2</h3>
+			<h4>**Our Menu**</h4>
+			<ol>
+				<li>Pasta</li>
+				<li>Pizza</li>
+				<li>Paneer Butter Masala</li>
+				<li>Cheese Butter Masala</li>
+				<li>Pau Bhaji</li>
+			</ol>
+
+			<p id="day"></p>
+			<p id="special-dish"></p>
+
+			<input type="button" id="btn-menu" class="btn btn-primary" value="SHOW ME TODAY's SPECIAL" onclick="md2()">
+		</div>
+	</div>
+
+
+
+<script type="text/javascript" src="../js/domevent.js"></script>
+<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>
+</html>

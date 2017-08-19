@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FORM VALIDATION</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<style>
+		#jumbo{
+			margin-top: 30px;
+		}
+		button{
+			margin-left: 10px;
+		}
+		h3{
+			background: #eee;
+			color:inherit;
+			width: 500px;
+		    height: 45px;
+		    padding: 10px;
+		    border-radius: 10px;
+		}
+		#form1{
+			width:400px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="jumbotron" id="jumbo">
+			<h1>FORM VALIDATION Exercise</h1>
+			<p>Hello, here you can find various examples of <strong>JAVASCRIPT</strong> Form Validation</p>
+		</div>
+		<form>
+			<div id="form1" class="form-group">
+				<label for="inputFirstname">First Name</label>
+				<input type="text" name="fname" class="form-control" id="inputFirstname" placeholder="First Name" required><br>
+
+				<label for="inputLastname">Last Name</label>
+				<input type="text" name="lname" class="form-control" id="inputLastname" placeholder="Last Name" required><br>
+
+				<input id="radio1" type="radio" name="gender">Male
+
+				<input id="radio2" type="radio" name="gender">Female<br><br>
+
+				<label for="state">State</label>
+				<select id="state" class="form-control">
+					<option value=""></option>
+					<option value="1">New Jersey</option>
+					<option value="2">New York</option>
+					<option value="3">Pennysilvenia</option>
+					<option value="4">California</option>
+				</select><br>
+
+				<input id="checked" type="checkbox" name="checkbox1"> I ACCEPT<br><br>
+
+				<input  type="submit" class="btn btn-success" name="submitButton" value="Submit" onClick="validate()">
+			</div>
+		</form>
+	</div>
+
+
+
+<script type="text/javascript" src="../js/formValidation.js"></script>
+<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>
+</html>
